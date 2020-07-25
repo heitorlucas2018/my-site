@@ -1,0 +1,16 @@
+{
+    "port": 3000,
+    "rootFolder": "./out",
+    "defaultIndex": "/index.html",
+    "defaultError": "404.html",
+    "types": {
+        "htm": "text/html",
+        "html": "text/html",
+        "jpg": "image/jpeg",
+        "jpeg": "image/jpeg",
+        "png": "image/png",
+        "css": "text/css",
+        "js": "text/javascript",
+        "json": "application/json"
+    }
+}
