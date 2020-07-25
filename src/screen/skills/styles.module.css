@@ -1,0 +1,83 @@
+.container {
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+}
+
+.text_animation {
+    color: #333333;
+    animation: spin-text 2s linear;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.img {
+    animation: spin-img 2s linear;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 95%;
+        height: 95%;
+        padding: 0 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .text_animation {
+        color: #333333;
+        animation: spin-text 2s linear;
+        margin: 1em;
+        text-align: left;
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 95%;
+        height: 95%;
+        padding: 0 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text_animation {
+        color: #333333;
+        animation: spin-text 2s linear;
+        margin: 0;
+        text-align: left;
+    }
+}
+
+
+/* The animation code */
+
+@keyframes spin-text {
+    0% {
+        opacity: 0%;
+        font-size: .0em;
+    }
+    25% {
+        opacity: 25%;
+        font-size: .5em;
+    }
+    50% {
+        opacity: 50%;
+        font-size: 1em;
+    }
+    100% {
+        opacity: 100%;
+        font-size: 2em;
+    }
+}

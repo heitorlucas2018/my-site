@@ -1,0 +1,81 @@
+.container {
+    margin: 1rem;
+    flex-basis: 45%;
+    padding: 1.5rem;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    animation: card-animation 2s linear;
+    box-shadow: 7px 4px 5px rgba(197, 197, 197, 0.5);
+}
+
+.card {
+    flex-basis: 50%;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.container:hover,
+.card:hover,
+.card:focus,
+.card:active {
+    color: #eee;
+    border-color: #999;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.card h3 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+.card p {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 1200px) {
+    .card h3 {
+        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+    }
+    .card p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        align-self: center;
+    }
+}
+
+@keyframes card-animation {
+    0% {
+        opacity: 0%;
+        font-size: .0em;
+    }
+    25% {
+        opacity: 25%;
+        font-size: .2em;
+    }
+    50% {
+        opacity: 50%;
+        font-size: .5em;
+    }
+    100% {
+        opacity: 100%;
+        font-size: 1em;
+    }
+}
