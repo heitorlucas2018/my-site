@@ -25,7 +25,11 @@ const data = {
       title: "# Experiences:", data: [
         {
           title: "QI.Jobs ​— S​tartup Weekend 2019",
-          description: "Projeto montado com o objetivo de levar para as instituições, candidatos tendo perfil ideal para a vaga, e conduzir o candidato a vaga ideal desejada, que este cumpra seus requisitos, sendo match perfeito."
+          tag: "Aplicativo Mobile",
+          description: "Projeto montado com o objetivo de levar para as instituições, candidatos tendo perfil ideal para a vaga, assim como conduzir o candidato a vaga, que este cumpra seus requisitos, sendo match perfeito."
+        },{
+          title: "Desenvolvedor ​— Próton Sistemas",
+          description: "Próton Sistemas é uma software house com sistemas para administração de estoque, gestão empresarial, frente de loja e outros.",
         },
       ]
     },
