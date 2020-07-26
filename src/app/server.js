@@ -1,60 +1,27 @@
-const { Console } = require('console');
-var http = require('http'),
-    url = require('url'),
-    config = require('./config'),
-    fileSistem = require('fs'),
-    parse = require('url').parse,
-    types = config.types,
-    rootFolder = config.rootFolder,
-    defaultIndex = config.defaultIndex,
-    defaultError = config.defaultError;
+const express = require("express");
+const path = require("path");
+const app = express();
 
-module.exports = http.createServer()
-    .on('request', onRequest)
-    .listen(config.port, function() {
-        console.log(`Server rodando na porta ${config.port}`)
-    });
-
-function onRequest(req, res) {
-    var filename = parse(req.url).pathname,
-        fullPath,
-        extension;
-
-    if (filename === '/') {
-        filename = defaultIndex;
-        routes(req);
-    }
-
-
-    fullPath = rootFolder + filename;
-    extension = filename.substr(filename.lastIndexOf('.') + 1);
-
-    fileHandler(fullPath, function(data) {
-        res.writeHead(200, {
-            'Content-Type': types[extension] || 'text/plain',
-            'Content-Length': data.length
-        });
-        res.end(data);
-
-    }, function(err) {
-        res.writeHead(404);
-        res.end();
-    });
+const configs = {
+    caminho: "out", //Aqui será definido a pasta de saída onde contém o index.html e os outros arquivos.
+    forcarHTTPS: fsimalse, //Defina para true se desejar que o redirecionamento para HTTPS seja forçado (é necessário certificado SSL ativo)
+    port: process.env.PORT || 3000
 }
 
-
-function fileHandler(filename, successFn, errorFn) {
-    fileSistem.readFile(filename, function(err, data) {
-        if (err) {
-            errorFn(err);
-            console.error('ERROR::', err)
-        } else {
-            successFn(data);
-        }
+if (configs.forcarHTTPS) //Se o redirecionamento HTTP estiver habilitado, registra o middleware abaixo
+    app.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele
+        if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) //Checa se o protocolo informado nos headers é HTTP
+            res.redirect(`https://${req.headers.host}${req.url}`); //Redireciona pra HTTPS
+        else //Se a requisição já é HTTPS
+            next(); //Não precisa redirecionar, passa para os próximos middlewares que servirão com o conteúdo desejado
     });
-};
 
-function routes(req) {
-    const method = req.method;
-    const param = url.parse(req.url);
-}
+app.use(express.static(configs.caminho)); //Serve os outros arquivos, como CSSs, Javascripts, Imagens etc.
+
+app.get("*", (req, res) => {// O wildcard '*' serve para servir o mesmo index.html independente do caminho especificado pelo navegador.
+    res.sendFile(path.join(__dirname, configs.caminho, "index.html"));
+});
+
+app.listen(configs.port, () => {
+    console.log(`Escutando na ${configs.port}!`);
+});
