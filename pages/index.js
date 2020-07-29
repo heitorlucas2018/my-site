@@ -46,6 +46,7 @@ export default function App() {
           align-items: center;
           background: #333;
           color: #fff;
+          font-family: 'Dancing Script', cursive;
         }
 
         footer img {
@@ -71,12 +72,13 @@ export default function App() {
 
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
         html,
         body {
           padding: 0;
           margin: 0;
-          font-family: 'Dancing Script', cursive;
+          font-family: 'Inconsolata', monospace;
         }
 
         * {

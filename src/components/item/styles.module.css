@@ -42,12 +42,12 @@
 
 .container h3 {
     margin: .5em;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .container h4 {
     margin: .5em;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: initial;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .container ul>li {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 1px;
 }
 
