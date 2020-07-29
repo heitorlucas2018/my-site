@@ -14,8 +14,8 @@ export default function Index({ title, data }) {
             </div>
             <div className={Styled.content} >
                 <ListSkills>
-                    {data && data.map(({ title, tag, data, description }) => {
-                        return <ListItem title={title} data={data}  tag={tag} description={description} />
+                    {data && data.map(({ title, tags, data, description }) => {
+                        return <ListItem title={title} data={data}  tags={tags} description={description} />
                     })
                     }
                 </ListSkills>

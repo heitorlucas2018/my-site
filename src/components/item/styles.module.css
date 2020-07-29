@@ -1,7 +1,6 @@
 .container {
     margin: .5rem;
     flex: 1;
-    max-height: 300px;
     flex-wrap: wrap;
     flex-basis: 40%;
     text-align: left;
@@ -24,10 +23,16 @@
 }
 
 .tag {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 2em;
+}
+
+.tag a {
     padding: 5px 10px;
-    margin: 10px;
-    height: 40px;
-    font-size: 25px;
+    margin: 3px;
+    font-size: small;
     border: 1px solid #333333;
     border-radius: 15px;
     text-decoration: none;
@@ -54,6 +59,7 @@
     overflow: hidden;
     list-style: none;
     height: 60%;
+    overflow-y: scroll;
 }
 
 .container ul>li {

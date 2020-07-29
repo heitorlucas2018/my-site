@@ -1,12 +1,16 @@
 
 import Styled from './styles.module.css'
 
-function Index({ id, title, tag, data, description }) {
+function Index({ id, title, tags, data, description }) {
 
     return (
         <div className={Styled.container} >
             <h3>{title || 'title'}</h3>
-           { tag &&  <a className={Styled.tag} href="/#teste" > {tag} </a> }
+            {tags && <div className={Styled.tag}>
+                { tags.map(value => {
+                        return <a href="/#teste" > {value} </a>
+                    })}
+            </div>}
             {description && <h4>{description}</h4>}
             {data && <ul>
                 { data.map(value => {
