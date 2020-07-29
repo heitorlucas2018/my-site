@@ -8,7 +8,7 @@ export default function Index({ title, data }) {
     return (
         <section className={Styled.container}>
             <div className={Styled.content}>
-                <h4 className={Styled.text_animation} style={{ fontSize: 40 }} >
+                <h4 className={Styled.text}>
                     { title || "# Skills" }
                 </h4>
             </div>

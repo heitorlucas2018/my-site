@@ -3,7 +3,7 @@ const data = {
   name: "",
   skills: [
     {
-      title: "# Techskills", data: [
+      title: "#Techskills", data: [
         { title: "Programming Language:", data: ["Php", "Java", "Pl/SQL", "JavaScript"] },
         { title: "Frameworks:", data: ["Laravel", "Spring Boot", "React js", "Next js", "React Native",] },
         { title: "Database:", data: ["Mysql", "Oracle DB 11g", "Firebase", "Redis"] },
@@ -11,7 +11,7 @@ const data = {
       ]
     },
     {
-      title: "# Softskills", data: [
+      title: "#Softskills", data: [
         { title: "Interpessoalidade", data: [] },
         { title: "Curiosidade", data: [] },
         { title: "Criatividade", data: [] },
@@ -22,7 +22,7 @@ const data = {
       ]
     },
     {
-      title: "# Experiences:", data: [
+      title: "#Experiences:", data: [
         {
           title: "QI.Jobs ​— S​tartup Weekend 2019",
           tags: ["App Mobile", "React Native"],
