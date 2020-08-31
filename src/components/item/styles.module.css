@@ -59,7 +59,6 @@
     overflow: hidden;
     list-style: none;
     height: 60%;
-    overflow-y: scroll;
 }
 
 .container ul>li {
