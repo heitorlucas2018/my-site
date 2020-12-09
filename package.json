@@ -6,7 +6,7 @@
         "dev": "next dev",
         "build": "next build && next export",
         "start": "node ./src/app/server",
-        "postinstall": "npm run build"
+        "postinstall": "npm run build",
     },
     "dependencies": {
         "express": "^4.17.1",

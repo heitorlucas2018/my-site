@@ -12,15 +12,10 @@ export default function Home() {
                     Welcome to my world and my life.
                     </h4>
                 <p>
-                    Sou um dos inúmeros moradores do planeta terra apaixonado por café, conhecimento, tecnologia e desenvolvimento, 
-                    pode-se dizer que foi amor a primeira vista. Tendo como base essas paixões eu venho procurado cada vez mais evoluir 
-                    tanto no profissional como pessoal. Durante a maior parte de minha carreira como desenvolvedor, trabalhei como
-                    freelancer no back-end (‘lado escuro da força’), e outros como full-stack (‘O Severino’). Por duas vezes dei início a 
-                    graduação em ‘Análise e Desenvolvimento de Sistemas’ na UNIFACS, mas por motivos financeiros e outros, não 
-                    consegui dar prosseguimento.
+                Sou um dos inúmeros moradores do planeta terra apaixonado por café, conhecimento, tecnologia e tudo que a envolve, pode-se dizer que foi amor à primeira vista. Tendo como base essas paixões eu venho procurado cada vez mais evoluir tanto no profissional como pessoal. Durante a maior parte de minha carreira como desenvolvedor, trabalhei como no backEnd (‘lado negro da força’), e outros como full-stack (‘o severino’). 
                 </p>
                 <p>
-                    Hoje trabalho como desenvolvedor na Próton Sistemas, e em projetos própios.
+                Atualmente estou dando continuidade a graduação em Análise e Desenvolvimento de Sistema na Estácio, e trabalhando em uma ótima empresa, como Analista de Sistemas. 
                 </p>
             </div>
             <div className={Styled.content}>
