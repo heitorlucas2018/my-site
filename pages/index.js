@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <Head>
-        <title>mySelf</title>
+        <title>heitorSantos.com</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
